@@ -1,0 +1,144 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+body {
+  background:#216869;
+  position: relative;
+  font-family: 'Lobster', cursive;
+}
+
+.profile-link {
+  color: #9CC5A1;
+  font-size: 12px;
+  display: block;
+}
+
+.link-heading {
+  display: block;
+  font-size: 12px;
+}
+
+a:hover,
+a:visited:hover {
+  color: #4543c0;
+}
+
+a:visited {
+  color: #f54028;
+}
+
+.outer {
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.left {
+  /* border: 1px solid blue; */
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.right {
+  /* border: 1px solid green; */
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  position: relative;
+  width: 340px;
+  height: 345px;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.glumac {
+  position: absolute;
+  color: white;
+  left: 144px;
+  top: 144px;
+}
+
+.square {
+  /* border: 1px solid orange; */
+  position: absolute;
+  clear: both;
+  height: 240px;
+  width: 240px;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+}
+
+.inner {
+  height: 240px;
+  width: 4px;
+  margin-right: 8px;
+  float: left;
+}
+
+.square-one--initial {
+  left: 48px;
+  top: 52px;
+}
+
+.square-one--expanded {
+  left: 0;
+  top: 0;
+}
+
+.square-two {
+  left: 52px;
+  top: 52px;
+}
+
+.square-three--initial {
+  left: 56px;
+  top: 52px;
+}
+
+.square-three--expanded {
+  left: 104px;
+  top: 104px;
+}
+
+.square-one .inner {
+  background: #f52828;
+}
+
+.square-two .inner {
+  background: #7ac043;
+}
+
+.square-three .inner {
+  background: #dccd01;
+}
+
+.details {
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+  /* border: 1px solid red; */
+}
