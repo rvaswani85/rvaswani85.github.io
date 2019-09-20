@@ -1,123 +1,113 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 
-<!-- This page is a fork of the brilliant design of https://glum.ac -->
-
 <head>
-  <meta charset="UTF-8">
-  <title>Hello World.</title>
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="images/favicons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+	<title>RohitHood</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
 </head>
 
 <body>
-  <div class="outer">
-    <div class="left">
-      <div class="wrap cf">
-        <div class="square square-one square-one--initial">
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-        </div>
 
-        <div class="square square-two">
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-        </div>
+	<div class="topContainer">
+		<nav class="flex-nav">
+			<a class="appHome" id="currTick" href="#">0</a>
+			<a href="https://www.investopedia.com/articles/investing/082614/how-stock-market-works.asp"
+				target="_blank">About Stock Trading</a>
+			<a href="https://en.wikipedia.org/wiki/Dunder_Mifflin" target="_blank">About This Company</a>
+		</nav>
+	</div>
 
-        <div class="square square-three square-three--initial">
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-          <div class="inner"></div>
-        </div>
-      </div>
-    </div>
+	<div class="mainContainer">
 
-    <div class="right">
-      <div class="details">
-        <h1>Rohit Vaswani</h1>
-        <p>Coding away to glory!!</p>
+		<div class="flex-left-container">
+			<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+		</div>
 
-        <p>
-          <span class="link-heading">Contact:</span>
-          <a class="profile-link" href="https://www.facebook.com/">Facebook</a>
-          <a class="profile-link" href="https://twitter.com/">Twitter</a>
-          <a class="profile-link" href="https://github.com/">Github</a>
-          <a class="profile-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=rohit.vaswani85@gmail.com">contact@gmail.com</a>
-        </p>
-      </div>
-    </div>
-  </div>
-  <script src="js/index.js"></script>
+		<div class="flex-right-container">
+
+			<div class="flex-info-container">
+
+				<div id="companyInfo">
+					<img id="cpyPic"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Dunder_Mifflin%2C_Inc.svg/2560px-Dunder_Mifflin%2C_Inc.svg.png">
+					<p>Dunder Mifflin Paper Company, Inc. is a fictional paper sales company featured in the American
+						television series The Office.The company was depicted as based in New York City, with branches
+						in smaller Northeastern cities. Episodes are set in the Scranton branch, but other branches have
+						been mentioned and seen.</p>
+				</div>
+
+				<div id="ceoInfo">
+					<img id="ceoPic" src="https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png">
+					<p>Michael Gary Scott (born March 15, 1962, in Scranton, Pennsylvania), is a fictional character
+						played by Steve Carell, who is a former branch manager of the Scranton branch of Dunder Mifflin
+						Paper
+						Company, The Michael Scott Paper Company, and later Dunder Mifflin Sabre.</p>
+				</div>
+
+			</div>
+
+			<div class="flex-stock-container">
+
+				<h3>Place Stock Orders Below</h3>
+
+				<h4 id="returnPct">Your Return in Percentage: 0.00%</h4>
+
+				<form id="brokerAccount">
+					<label>Enter Money to your Trading Acct <b>$</b>: </label>
+					<input type="number" id="startBalance" value=10000 min=0>
+				</form>
+
+				<form id="buySell">
+					<!--autofocus will put focus on input and also default text-->
+					<label>Enter Qty of Shares to (Buy or Sell): </label>
+					<input type="number" id="qtyBuySell" autofocus placeholder="Enter Qty" value=10 min=0>
+					<select id="orderBuySell">
+						<option value="buy">BUY</option>
+						<option value="sell">SELL</option>
+					</select>
+					<button id="btnOrder">ORDER</button>
+
+				</form>
+
+				<br>
+
+				<table id="stockTable">
+					<thead>
+						<tr>
+							<th>Order_Id</th>
+							<th>Type</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Value</th>
+							<th>Balance</th>
+						</tr>
+					<tfoot id="total">
+						<th>Tot</th>
+						<th></th>
+						<th>0</th>
+						<th></th>
+						<th>0</th>
+						<th>0</th>
+					</tfoot>
+					</thead>
+				</table>
+
+			</div>
+
+		</div>
+		<!--canvas js for stocks-->
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+		<!--jquery-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+
+		<!--js code for chart from canvas js-->
+		<script src="js/chart.js"></script>
+		<script src="js/order.js"></script>
+
 </body>
 
 </html>
