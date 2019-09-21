@@ -21,7 +21,6 @@ window.onload = function () {
             labelFontSize: 10,
         },
 
-
         data: [{
             type: "line",
             dataPoints: dps,
@@ -83,12 +82,12 @@ function tickPrice(tickPrice, prevPrice) {
         }
     }
 
+    // writes to the nav bar
     $('.appHome').html(strVar)
 
 }
 
-
-// Order Form and Table
+// order form and table
 function onReady() {
 
     let ordCnt = 0
@@ -109,7 +108,8 @@ function onReady() {
         let priceBuySell= $('#currTick').text().split(" ") 
         let acctBalance = $('#startBalance').val() //initial balance
 
-        $("#startBalance").prop('disabled', true);
+        // freeze balance in account
+        $("#startBalance").prop('disabled', true)
         
         // increment order count
         ordCnt = ordCnt + 1
@@ -120,26 +120,36 @@ function onReady() {
             quantity = quantity*-1
         }
         
-        // get current price, value
-        let price = parseInt(priceBuySell[5]) //current price
-        let value = quantity * price //curr market value
+        // get current price, calculate value
+        let price = parseInt(priceBuySell[5])
+        let value = quantity * price
 
         // get current balance
+        // for order #1 balance = initial balance
+        // remaining balance after +- value
         if(ordCnt == 1) {
-            new_balance = parseInt(acctBalance) - value // for order 1 balace = initial balance
+            new_balance = parseInt(acctBalance) - value 
         } else {
-            new_balance =  new_balance - value // remaining balance after +- value
+            new_balance =  new_balance - value 
         }
 
-        //console.log(orderType)
-        //console.log(quantity)
-        //console.log(price)
-        //console.log(value)
-        //console.log(balance
+        //console.log('Type: '+ orderType)
+        //console.log('Quantity:' + quantity)
+        //console.log('Price: ' + price)
+        //console.log('Value: '+ value)
+        //console.log('Balance: ' + new_balance)
 
         tot_quantity = tot_quantity + quantity
         tot_value = tot_value + value
-        //new_balance = tot_balance + cur_balance
+        
+        //console.log('Tot Qty: ' + tot_quantity)
+        //console.log('Tot Val: ' + tot_value)
+
+        // leverage exit
+        if (parseInt(acctBalance) < new_balance){
+            alert('You are below Bank Balance Mo Money Mo Problems Stanley')
+            return
+        }
         
         $('#stockTable').append("<tr><td>" + ordCnt + "</td><td>" 
         + orderType + "</td><td>" 
@@ -157,10 +167,12 @@ function onReady() {
         + new_balance + "</td></tr>"
         )
 
+        // calculate return
         let ret = Math.round(((new_balance-acctBalance)/parseInt(acctBalance))*100)
 
         $('#returnPct').html(`Your Return in Percentage ${ret} %`)
         
+
 }
 
 }
