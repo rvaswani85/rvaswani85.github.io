@@ -155,7 +155,6 @@ body {
     border: 1px solid black;
   }
 
-
   @media(max-width: 768px){
 
     /* nav bar */
@@ -164,7 +163,7 @@ body {
       flex-direction: row;
       justify-content: space-around;
       padding:20px;
-      background: black; 
+      background: black;
     }
 
     .flex-nav .appHome{
@@ -177,7 +176,7 @@ body {
     .flex-nav a{
       color:white;
       font-weight:300;
-      font-size:12px;
+      font-size:10px;
       text-decoration: none;
     }
     
@@ -207,8 +206,156 @@ body {
       /*border:1px solid black;*/
 }
 
+    .flex-right-container .flex-info-container{
+      display:flex;
+      flex-direction: row;
+      font-size: 8px;
     }
 
+    .flex-info-container {
+      display:flex;
+      /*border: 1px black solid;*/
+    }
+
+    .flex-ticker-container{
+      flex:1;
+      border: 1px black solid;
+      font-size:8px;
+    }
+
+    .flex-info-container #companyInfo {
+      margin-right:5px;
+      text-align: justify;
+      /*border: 1px black solid;*/
+    }
+
+    .flex-info-container #ceoInfo {
+      margin-left:5px;
+      text-align: justify;
+      /*border: 1px black solid;*/
+    }
+
+    .flex-info-container #companyInfo #cpyPic {
+        margin-left: 140px;
+        height:80px;
+        width:80px;
+        
+      }
+
+      .flex-info-container #ceoInfo #ceoPic {
+        margin-left: 140px;
+        height:80px;
+        width:80px;
+      }
+
+      .flex-stock-container{
+        font-size: 10px;
+      }
+
+    }
+
+    @media(max-width: 375px){
+
+      /* nav bar */
+      .flex-nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:5px;
+        background: black; 
+      }
+  
+      .flex-nav .appHome{
+        color:white;
+        font-weight:600;
+        font-size:8px;
+        padding-right:8%;
+      }
+    
+      .flex-nav a{
+        color:white;
+        font-weight:300;
+        font-size:6px;
+        text-decoration: none;
+      }
+      
+      /* main container*/
+      .mainContainer{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+      }
+  
+      /* left side chart*/
+      .flex-left-container{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        height:10%;
+
+        /*border:1px solid black;*/
+
+      }
+  
+      /* right side items*/
+      .flex-right-container{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        padding-top: 25px;
+        /*border:1px solid black;*/
+        
+      }
+
+      .flex-right-container .flex-info-container{
+        display:flex;
+        flex-direction: row;
+        font-size: 6px;
+      }
+  
+      .flex-info-container {
+        display:flex;
+        /*border: 1px black solid;*/
+      }
+  
+      .flex-ticker-container{
+        flex:1;
+        border: 1px black solid;
+      }
+  
+      .flex-info-container #companyInfo {
+        margin-right:5px;
+        text-align: justify;
+        /*border: 1px black solid;*/
+      }
+  
+      .flex-info-container #ceoInfo {
+        margin-left:5px;
+        text-align: justify;
+        font-size: 5px;
+        /*border: 1px black solid;*/
+      }
+  
+      .flex-info-container #companyInfo #cpyPic {
+          margin-left: 80px;
+          height:40px;
+          width:40px;
+          
+        }
+  
+        .flex-info-container #ceoInfo #ceoPic {
+          margin-left: 40px;
+          height:40px;
+          width:40px;
+        }
+
+        .flex-stock-container{
+          font-size: 8px;
+        }
+
+
+  
+      }
 
 
 
