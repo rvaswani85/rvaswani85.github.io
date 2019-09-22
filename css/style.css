@@ -141,11 +141,10 @@ body {
     width:80px;
   }
 
-  /*
+  /* place holder 
   .flex-stock-container{
 
   }
-
   */
 
   .flex-stock-container #brokerAccount #startBalance{
@@ -447,6 +446,3 @@ table, th, td {
         }
 
       }
-
-
-

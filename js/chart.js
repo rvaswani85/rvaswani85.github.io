@@ -24,12 +24,12 @@ window.onload = function () {
         data: [{
             type: "line",
             dataPoints: dps,
-            lineColor: "black", // add white line
+            lineColor: "black", // add white line if required
             markerType: "triangle",
             markerColor: "black",
         }],
 
-        backgroundColor: "#f0efef", // background
+        backgroundColor: "#f0efef", // background color change
     });
 
     var xVal = 0;
