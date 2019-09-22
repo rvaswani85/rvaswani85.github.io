@@ -102,7 +102,7 @@ body {
 .flex-right-container .flex-info-container{
   display:flex;
   flex-direction: row;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .flex-info-container {
@@ -141,19 +141,57 @@ body {
     width:80px;
   }
 
-  /*table formatting-fix more*/
-  table {
-    border-collapse: collapse;
-    border-spacing: 2px;
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center; 
+  /*
+  .flex-stock-container{
+
   }
-  
-  table, th, td {
-    border: 1px solid black;
+
+  */
+
+  .flex-stock-container #brokerAccount #startBalance{
+    width : 80px;
+
   }
+
+  .flex-stock-container #buySell #qtyBuySell{
+    width : 80px;
+
+  }
+
+  .flex-stock-container #buySell #orderBuySell{
+    width : 60px;
+    height: 20px;
+
+  }
+
+  .flex-stock-container #buySell #btnOrder{
+    width : 80px;
+    height : 20px;
+  }
+
+
+ /*table formatting*/
+ table {
+  border-collapse: collapse;
+  border-spacing: 2px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center; 
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
 
   @media(max-width: 768px){
 
@@ -192,7 +230,6 @@ body {
       display:flex;
       flex-direction:column;
       width:100%;
-      
       /*border:1px solid black;*/
 
     }
@@ -252,9 +289,41 @@ body {
         font-size: 8px;
       }
 
+      .flex-stock-container #brokerAccount #startBalance{
+        width : 100px;
+        height : 14px;
+        font-size:8px;
+      }
+
+      .flex-stock-container #buySell #qtyBuySell{
+        width : 100px;
+        height : 14px;
+        font-size:8px;
+      }
+
+      .flex-stock-container #buySell #orderBuySell{
+        width : 100px;
+        height : 14px;
+        font-size: 8px;
+      }
+
+      .flex-stock-container #buySell #btnOrder{
+        width : 80px;
+        font-size: 8px;
+        height : 14px;
+      }
+
     }
 
 
+
+
+
+
+
+
+
+    
     @media(max-width: 425px){
 
       /* nav bar */
@@ -351,6 +420,30 @@ body {
 
         .flex-stock-container{
           font-size: 8px;
+        }
+
+        .flex-stock-container #brokerAccount #startBalance{
+          width : 50px;
+          height : 14px;
+          font-size:8px;
+        }
+  
+        .flex-stock-container #buySell #qtyBuySell{
+          width : 50px;
+          height : 14px;
+          font-size:8px;
+        }
+  
+        .flex-stock-container #buySell #orderBuySell{
+          width : 50px;
+          height : 14px;
+          font-size: 8px;
+        }
+  
+        .flex-stock-container #buySell #btnOrder{
+          width : 40px;
+          font-size: 8px;
+          height : 14px;
         }
 
       }

@@ -18,7 +18,7 @@ window.onload = function () {
         },
 
         axisX: {
-            labelFontSize: 10,
+            labelFontSize: 10
         },
 
         data: [{
@@ -26,8 +26,7 @@ window.onload = function () {
             dataPoints: dps,
             lineColor: "black", // add white line
             markerType: "triangle",
-            markerColor: "black"
-
+            markerColor: "black",
         }],
 
         backgroundColor: "#f0efef", // background
@@ -141,7 +140,8 @@ function onReady() {
         //console.log('Quantity:' + quantity)
         //console.log('Price: ' + price)
         //console.log('Value: ' + value)
-        //console.log('Balance: ' + new_balance)
+        console.log('Initial Acct Balance: ' + parseInt(acctBalance))
+        console.log('New Balance: ' + new_balance)
 
         tot_quantity = tot_quantity + quantity
         tot_value = tot_value + value
@@ -150,8 +150,12 @@ function onReady() {
         console.log('Tot Val: ' + tot_value)
 
         // leverage
-        if (new_balance < parseInt(acctBalance)) {
-
+        if (new_balance < 0) {
+            console.log('Balance below Acct Balance: ' + new_balance)
+            alert('Below Account Balance (Leverage) - Mo Money Mo Problem Stanley!')
+        } else if(tot_quantity < 0) {
+            console.log('Short selling: ' + tot_quantity)
+            alert('Short Selling (Leverage) - Mo Money Mo Problem Stanley!')
         }
 
         $('#stockTable').append("<tr><td>" + ordCnt + "</td><td>"
@@ -170,8 +174,8 @@ function onReady() {
             + new_balance + "</td></tr>"
         )
 
-        // calculate return
-        let ret = Math.round(((new_balance - acctBalance) / parseInt(acctBalance)) * 100)
+        // calculate absolute return [ignore leverage, unrealized gains]
+        let ret = Math.round((Math.abs(new_balance - acctBalance) / parseInt(acctBalance)) * 100)
 
         $('#returnPct').html(`Your Return in Percentage ${ret} %`)
 
