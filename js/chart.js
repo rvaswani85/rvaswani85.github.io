@@ -136,12 +136,15 @@ function onReady() {
             new_balance = new_balance - value
         }
 
-        //console.log('Type: ' + orderType)
-        //console.log('Quantity:' + quantity)
-        //console.log('Price: ' + price)
-        //console.log('Value: ' + value)
+
+        console.log('OrderId: ' + ordCnt)
+        console.log('Type: ' + orderType)
+        console.log('Quantity: ' + quantity)
+        console.log('Price: ' + price)
+        console.log('Value: ' + value)
+
         console.log('Initial Acct Balance: ' + parseInt(acctBalance))
-        console.log('New Balance: ' + new_balance)
+        console.log('New/Tot Balance: ' + new_balance)
 
         tot_quantity = tot_quantity + quantity
         tot_value = tot_value + value
@@ -149,11 +152,11 @@ function onReady() {
         console.log('Tot Qty: ' + tot_quantity)
         console.log('Tot Val: ' + tot_value)
 
-        // leverage
+        // leverage alerts
         if (new_balance < 0) {
             console.log('Balance below Acct Balance: ' + new_balance)
             alert('Below Account Balance (Leverage) - Mo Money Mo Problem Stanley!')
-        } else if(tot_quantity < 0) {
+        } else if (tot_quantity < 0) {
             console.log('Short selling: ' + tot_quantity)
             alert('Short Selling (Leverage) - Mo Money Mo Problem Stanley!')
         }
@@ -174,10 +177,11 @@ function onReady() {
             + new_balance + "</td></tr>"
         )
 
-        // calculate absolute return [ignore leverage, unrealized gains]
+        // calculate absolute return [ignore leverage, incl unrealized gains]
         let ret = Math.round((Math.abs(new_balance - acctBalance) / parseInt(acctBalance)) * 100)
 
         $('#returnPct').html(`Your Return in Percentage ${ret} %`)
+        console.log('Return: ' + ret)
 
     }
 
