@@ -178,7 +178,7 @@ function onReady() {
         )
 
         // calculate absolute return [ignore leverage, incl unrealized gains]
-        let ret = Math.round((Math.abs(new_balance - acctBalance) / parseInt(acctBalance)) * 100)
+        let ret = Math.round(((new_balance - acctBalance) / parseInt(acctBalance)) * 100)
 
         $('#returnPct').html(`Your Return in Percentage ${ret} %`)
         console.log('Return: ' + ret)
